@@ -1,0 +1,13 @@
+.Basket-Item {
+  display: flex;
+  flex-direction: column;
+
+  & > .info {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  & > span:nth-child(2) {
+    flex: 1;
+  }
+}

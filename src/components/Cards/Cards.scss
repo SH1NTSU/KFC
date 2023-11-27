@@ -1,0 +1,64 @@
+.bottom-section {
+  background-color: #f0f0f0;
+  & > .Carousel {
+    .Carousel-item {
+      border-radius: 5%;
+      background-color: #fff;
+      width: 30vh;
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      & > img {
+        width: 90%;
+        height: 60%;
+      }
+
+      & > .Card-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      & > button {
+        background: #f4f6e6;
+        color: #8ea604;
+        height: 40px;
+        width: 40px;
+        border-radius: 6px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2vh;
+      }
+    }
+  }
+  & > .bottom-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: -1vh;
+    height: 5vh;
+    font-size: 2.5vh;
+  }
+  & > .bottom-nav > .bottom-buttons {
+    display: flex;
+    flex-direction: raw;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9vh;
+
+    & > button {
+      width: 3vh;
+      height: 3vh;
+      border-radius: 50%;
+      background-color: #fff;
+      font-size: 3vh;
+      display: flex;
+      flex-direction: flex-end;
+    }
+  }
+}

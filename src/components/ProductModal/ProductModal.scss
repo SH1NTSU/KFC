@@ -1,0 +1,72 @@
+.productmodal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > .productmodal-inner {
+    position: relative;
+    border-radius: 5%;
+    width: 70%;
+    max-width: 640px;
+    background-color: #fff;
+    height: 85%;
+    overflow: scroll;
+
+    & > .nav > .section-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 9vh;
+    }
+    & > .nav > .main-section {
+      display: flex;
+      flex-direction: column;
+
+      & > img {
+        width: auto;
+        height: auto;
+        object-fit: cover;
+        align-self: center;
+      }
+
+      & > .name-price-container {
+        display: flex;
+        flex-direction: raw;
+        justify-content: space-around;
+        font-size: 2.5vh;
+      }
+
+      & > span {
+        margin-left: 11vh;
+      }
+    }
+
+    & > .footer-section {
+      position: sticky;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f0f0f0;
+      height: 10vh;
+
+      .footer-add-product {
+        background-color: rgb(255, 255, 255);
+        height: 5vh;
+        width: 10vh;
+      }
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}
