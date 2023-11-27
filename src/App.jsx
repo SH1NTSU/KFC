@@ -13,6 +13,9 @@ function App() {
       orderedProducts.filter((product) => product.id !== orderedProduct.id)
     );
   };
+  const handleSubmit = (cart) => {
+    setOrderedProducts([...orderedProducts, ...cart]);
+  };
   return (
     <>
       <Basket
@@ -31,6 +34,7 @@ function App() {
               onProductSelect={handleProductSelect}
               orderedProducts={orderedProducts}
               onProductRemove={handleProductRemove}
+              onSubmit={handleSubmit}
             ></Product>
           ))}
         </section>

@@ -2,7 +2,7 @@ import ProductModal from "../ProductModal/ProductModal";
 import "./Product.scss";
 import React, { useState } from "react";
 const Product = (props) => {
-  const { product, onProductSelect, orderedProducts, onProductRemove } = props;
+  const { product, orderedProducts, onSubmit } = props;
   const { name, price, description, imageUrl } = product;
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -19,6 +19,7 @@ const Product = (props) => {
   const handleButtonClick = () => {
     setModalOpen(true);
   };
+
   return (
     <article className="product" data-ordered={isOrdered}>
       <div>
@@ -38,9 +39,7 @@ const Product = (props) => {
             onClose={handleButtonClose}
             product={product}
             onOpen={isModalOpen}
-            onProductSelect={onProductSelect}
-            onCount={orderCount}
-            onProductRemove={onProductRemove}
+            onSubmit={onSubmit}
           ></ProductModal>
         </section>
       </div>
